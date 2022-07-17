@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../content.service';
 
 @Component({
   selector: 'app-blogger',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BloggerComponent implements OnInit {
 
-  constructor() { }
+  Blog = [{
+    bloggerId : '',
+    bloggerName : '',
+    imageUrl : '',
+    blogTitle : '',
+    blogDate : '',
+    blogContent : ''
+  }]
+
+  constructor(private contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.contentService.getblogs().subscribe((data:any)=>{
+      this.Blog=JSON.parse(JSON.stringify(data));
+    })
   }
 
 }

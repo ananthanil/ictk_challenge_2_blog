@@ -9,6 +9,8 @@ import { BlogviewComponent } from './blogview/blogview.component';
 import { SigninComponent } from './signin/signin.component';
 import { CommentComponent } from './comment/comment.component';
 import { BloggerComponent } from './blogger/blogger.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BloggerComponent } from './blogger/blogger.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

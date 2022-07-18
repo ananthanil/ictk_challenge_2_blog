@@ -17,7 +17,13 @@ export class BloggerComponent implements OnInit {
     blogContent : ''
   }]
 
+  sus:boolean = true;
+  
   constructor(private contentService: ContentService) { }
+
+  toggle(): void{
+    this.sus = !this.sus
+  }
 
   ngOnInit(): void {
     this.contentService.getblogs().subscribe((data:any)=>{

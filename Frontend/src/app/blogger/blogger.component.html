@@ -1,13 +1,14 @@
 <div class="container text-center pb-5 pt-5" *ngFor='let Blogs of Blog'>
     <div class="row text-center align-items-center my-3 py-3">
         <div class="col-15 col-md-7 pb-2">
-             <img [src]='Blogs.imageUrl'  [title] = 'Blogs.bloggerName'> <!--alt="..." class="img-thumbnail" -->
+             <img [src]='Blogs.imageUrl'  [title] = 'Blogs.bloggerName'> 
         </div> 
   
         <div class="col-10 col-md-3">
   
             <div class="text-justify ml-3 mr-3"style="font-size: 20px;">
-                <button type="button" class="btn btn-outline-success" onclick="signin(redirect);">Follow</button>
+                <button class="btn btn-outline-success" 
+                (click)='toggle()'>{{sus? 'Follow' : 'Unfollow'}}</button>
                 <p class="pt-3">{{ Blogs.bloggerName }}</p>
             </div>  
         </div>

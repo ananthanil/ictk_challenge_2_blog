@@ -8,6 +8,8 @@ import { ContentService } from '../content.service';
 })
 export class BloggerComponent implements OnInit {
 
+  valu:Number = 1+1;
+
   Blog = [{
     bloggerId : '',
     bloggerName : '',
@@ -24,6 +26,7 @@ export class BloggerComponent implements OnInit {
   toggle(): void{
     this.sus = !this.sus
   }
+  
 
   ngOnInit(): void {
     this.contentService.getblogs().subscribe((data:any)=>{

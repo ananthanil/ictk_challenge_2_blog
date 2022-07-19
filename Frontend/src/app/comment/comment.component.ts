@@ -7,6 +7,7 @@ import { ContentService } from '../content.service';
 })
 
 export class CommentComponent implements OnInit {
+  title = 'Comments';
   greeting : boolean = true;
   star: boolean = true;
   Blog = [{

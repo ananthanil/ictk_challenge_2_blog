@@ -2,19 +2,21 @@
 <div class="color">
     <div class="container" *ngFor='let Blogs of Blog'>
         <div class="row pr-3 pl-3 pb-5">
-                <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
+                <div class="col-12 col-md-12 text-justify">
+                    
                     <p>
                       <div class="container">
-
+                        <h3 class="text-white">{{title}}</h3>
                         <div class="row text-center">
                             <div class="col-12 py-5">
-                                <h1 class="font-weight-light"><span class="text-info text">{{ Blogs.blogTitle }}</span> {{ Blogs.blogDate}}</h1>
+                                <h1 class="head" >{{ Blogs.blogTitle }}</h1>
+                                <h6 class="text-white">{{ Blogs.blogDate}}</h6>
                             </div>
                         </div>
                     
                         <div class="row pr-3 pl-3" >
-                                <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
-                                    <p> {{Blogs.blogContent}} </p>
+                                <div class="col-12 col-md-12 text-justify" style="font-size: 25px;">
+                                    <p class="text"> {{Blogs.blogContent}} </p>
                                 </div>
                         </div>
                     

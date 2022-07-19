@@ -1,25 +1,27 @@
 <app-blogger></app-blogger>
-<div class="container" *ngFor='let Blogs of Blog'>
-    <div class="row pr-3 pl-3">
-            <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
-                <p>
-                  <div class="container">
+<div class="color">
+    <div class="container" *ngFor='let Blogs of Blog'>
+        <div class="row pr-3 pl-3 pb-5">
+                <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
+                    <p>
+                      <div class="container">
 
-                    <div class="row text-center">
-                        <div class="col-12 py-5">
-                            <h1 class="font-weight-light"><span class="text-info">{{ Blogs.blogTitle }}</span> {{ Blogs.blogDate}}</h1>
-                        </div>
-                    </div>
-        
-                    <div class="row pr-3 pl-3" >
-                            <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
-                                <p> {{Blogs.blogContent}} </p>
+                        <div class="row text-center">
+                            <div class="col-12 py-5">
+                                <h1 class="font-weight-light"><span class="text-info text">{{ Blogs.blogTitle }}</span> {{ Blogs.blogDate}}</h1>
                             </div>
+                        </div>
+                    
+                        <div class="row pr-3 pl-3" >
+                                <div class="col-12 col-md-12 text-justify" style="font-size: 20px;">
+                                    <p> {{Blogs.blogContent}} </p>
+                                </div>
+                        </div>
+                    
                     </div>
-        
+
                 </div>
-                
-            </div>
+        </div>
     </div>
 </div>
 <app-comment></app-comment>

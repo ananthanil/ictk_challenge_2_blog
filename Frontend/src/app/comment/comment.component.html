@@ -1,19 +1,26 @@
-<div class="container text-center pb-5 pt-5">
-
-    <!-- Alleppey Lighthouse -->
+<div class="color pb-5 pt-5" *ngFor='let Blogs of Blog'>
+    <div class="container text-white">
     <div class="row text-center align-items-center my-3 py-3">
-        <div class="col-15 col-md-7 pb-2">
-            <div class="imgg"><img class="img-fluid rounded-squre w-75" src="./images/alappuzha_light_house.jpg" alt="Alleppey Lighthouse"></div> 
-        </div> 
-  
-        <div class="col-10 col-md-3">
-  
-            <h5>Alleppey Lighthouse</h5>
+        <div class="col-10 col-md-4 text pb-2">
+            <h5>{{ Blogs.blogCommentPreson }}</h5>
             <div class="text-justify ml-3 mr-3"style="font-size: 20px;">
-                <p>One of the oldest such structures of Kerala, Alleppey Lighthouse was also the marker of busiest ports and trade centres in the state. The lighthouse was constructed during the reign of Marthanda Varma II, and the tower was installed in 1862. The lighthouse offers a 360-degree view of the Arabian Ocean, and one can easily spend hours enjoying the infinity feeling.</p>
+                <p>{{ Blogs.blogComment}}</p>
+            </div> 
+        </div>
+        <div class="col-10 col-md-4 text ml-5">
+                <h5>{{ Blogs.blogCommentPreson1 }}</h5>
+            <div class="text-justify ml-3 mr-3"style="font-size: 20px;">
+                <p>{{ Blogs.blogComment1}}</p>
+            </div>  
+        </div>
+        <div class=" col-10 col-md-4 ml-5 text">
+                <h5>{{ Blogs.blogCommentPreson2 }}</h5>
+            <div class="text-justify ml-3 mr-3"style="font-size: 20px;">
+                <p>{{ Blogs.blogComment2}}</p>
             </div>  
         </div>
     </div>
+</div>
 </div>
 
 <div class="container pb-5 pt-5">
